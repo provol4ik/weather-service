@@ -1,0 +1,20 @@
+/CLAUDE.md
+/ClientStart.cmd
+/ServerStart.cmd
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Secrets / runtime data
+.env
+data/apis.csv
+data/weather_cache.json
+
+# Editor / agent
+.claude/
+.idea/
+.vscode/

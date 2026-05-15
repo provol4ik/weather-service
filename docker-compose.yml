@@ -1,0 +1,18 @@
+services:
+  weather:
+    build:
+      context: https://github.com/provol4ik/weather-service.git#main
+    image: weather-service:latest
+    pull_policy: build
+    container_name: weather-service
+    ports:
+      - "8181:8181"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - LOG_LEVEL=INFO
+      - POLL_INTERVAL_HOURS=1
+      - REQUESTS_PER_KEY=50
+      - ADMIN_TOKEN=${ADMIN_TOKEN:-}
+      - OWM_API_KEYS=${OWM_API_KEYS:-}
+    restart: unless-stopped
