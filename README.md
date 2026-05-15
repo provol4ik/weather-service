@@ -83,6 +83,7 @@ python -m src.main
 
 ### Docker
 
+```bash
 services:
   weather:
     build:
@@ -101,6 +102,7 @@ services:
       - ADMIN_TOKEN=${ADMIN_TOKEN:-}
       - OWM_API_KEYS=${OWM_API_KEYS:-}
     restart: unless-stopped
+```
 
 Добавьте .env поместив туда свои Admin_Token и API, пример в .env.example
 
